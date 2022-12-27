@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500&family=Fraunces:opsz,wght@9..144,700&family=Karla:wght@400;700&family=Montserrat:wght@500;700&family=Outfit:wght@300;400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+.d-flex{
+    display: flex;
+}
+.align-items-center{
+    align-items: center;
+}
+body{
+    background-color:hsl(30, 38%, 92%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+main{
+    width: 650px;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 20px;
+    box-shadow: 0 5px 10px 10px rgba(0, 0, 0, 0.05);
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+}
+main .image img{
+    width: 100%;
+    height: 100%;
+}
+main .content{
+    padding: 25px;
+}
+main .content .title{
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    font-size: 15px;
+    color: hsl(228, 12%, 48%);
+    display: block;
+    margin-bottom: 20px;
+}
+main .content h1{
+    font-size: 37px;
+    margin-bottom: 20px;
+    font-family: 'Fraunces', serif;
+}
+main .content p{
+    font-size: 15px;
+    line-height: 1.6;
+    color: hsl(228, 12%, 48%);
+    margin-bottom: 30px;
+}
+main .content .price{
+    margin-bottom: 30px;
+}
+main .content .price span:first-of-type{
+    color: hsl(158, 36%, 37%);
+    font-weight: 700;
+    font-family: 'Fraunces', serif;
+    font-size: 35px;
+}
+main .content .price span:last-child {
+    color: hsl(228, 12%, 48%);
+    text-decoration: line-through;
+    display: inline-block;
+    margin-left: 30px;
+    font-size: 15px;
+}
+a.btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(158, 36%, 37%);
+    padding: 15px 20px;
+    color: hsl(0, 0%, 100%);
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 15px;
+}
+a.btn img{
+    margin-right: 10px;
+}
+/* Media Query */
+@media (max-width:625px){
+    main{
+        grid-template-columns: 1fr;
+    }
+    main .image img{
+        max-height: 450px;
+        object-fit: cover;
+    }
+    main .content h1{
+        font-size: 33px;
+    }
+}
